@@ -20,6 +20,7 @@ class ModelProv(o: FabricDataOutput) : FabricModelProvider(o) {
         val list = listOf(
             "folly_stick",
             "jolly_stick",
+            "sweet_tooth",
             "crystalline",
             "glass",
             "golden_shear",

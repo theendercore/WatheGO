@@ -24,6 +24,7 @@ public class AddingSkinMixin {
     private static void clInit(CallbackInfo ci) {
         register("FOLLY_STICK", 0xff004f, "Folly Stick");
         register("JOLLY_STICK", 0xfbf5f5, "Jolly Stick");
+        register("SWEET_TOOTH", 0xd79635, "Sweet Tooth");
         register("CRYSTALLINE", 0x6f4fab, "Crystalline");
         register("GLASS", 0x8bc1cd, "Glass Shard");
         register("GOLDEN_SHEAR", 0xe28634, "Golden Shear");
