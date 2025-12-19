@@ -30,19 +30,16 @@ repositories {
 //println("Task: " + gradle.startParameter.taskNames.joinToString(","))
 
 modSettings {
-    entrypoint("main", "org.teamvoided.template.Template::init")
-    entrypoint("client", "org.teamvoided.template.client.TemplateClient::init")
-    entrypoint("fabric-datagen", "org.teamvoided.template.data.gen.TemplateData")
-
-    mixinFile("${modId()}.client.mixins.json")
+    entrypoint("main", "org.teamvoided.wathe_go.WatheGO::init")
+    entrypoint("fabric-datagen", "org.teamvoided.wathe_go.data.gen.WatheGOData")
     mixinFile("${modId()}.mixins.json")
-//    accessWidener("${modId()}.accesswidener")
+    dependency("wathe", "*")
 }
 
 dependencies {
     modImplementation(fileTree("libs"))
     // Dependencies
-    modImplementation(libs.fzzy.config)
+//    modImplementation(libs.fzzy.config)
     // QoL
     modImplementation(libs.modmenu)
     modCompileOnly("${libs.emi.get()}:api")
@@ -101,7 +98,7 @@ tasks {
 //    jar {
 //        val valTaskNames = gradle.startParameter.taskNames
 //        if (!valTaskNames.contains("runDataGen")) {
-//            exclude("org/teamvoided/template/data/gen/*")
+//            exclude("org/teamvoided/wathe_go/data/gen/*")
 //        } else {
 //            println("Running datagen for task ${valTaskNames.joinToString(" ")}")
 //        }

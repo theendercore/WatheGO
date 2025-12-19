@@ -1,2 +1,2 @@
-# The TeamVoided Template
-Template mod by TeamVoided
+# Wathe:GO
+CS:GO gambling adding to Wathe

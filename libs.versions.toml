@@ -1,9 +1,9 @@
 [versions]
 kotlin = "2.2.21"
-fabric-loom = "1.11-SNAPSHOT"
+fabric-loom = "1.13-SNAPSHOT"
 iridium = "3.5.0"
 # Dependencies
-fzzy-config = "0.7.2+1.21"
+#fzzy-config = "0.7.2+1.21"
 # QoL
 modmenu = "11.0.3"
 emi = "1.1.22+1.21.1"
@@ -13,7 +13,7 @@ imguimc = "1.21.1-1.0.8"
 
 [libraries]
 # Dependencies
-fzzy-config = { module = "me.fzzyhmstrs:fzzy_config", version.ref = "fzzy-config" }
+#fzzy-config = { module = "me.fzzyhmstrs:fzzy_config", version.ref = "fzzy-config" }
 # QoL
 modmenu = { module = "com.terraformersmc:modmenu", version.ref = "modmenu" }
 emi = { module = "dev.emi:emi-fabric", version.ref = "emi" }
