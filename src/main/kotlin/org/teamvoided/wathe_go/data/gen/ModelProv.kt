@@ -26,6 +26,11 @@ class ModelProv(o: FabricDataOutput) : FabricModelProvider(o) {
             "golden_shear",
             "roze",
             "makeshift",
+            "missing_source",
+            "nail",
+            "cultist",
+            "starlight",
+            "dart",
         )
         for (name in list) {
             gen.knife(name)

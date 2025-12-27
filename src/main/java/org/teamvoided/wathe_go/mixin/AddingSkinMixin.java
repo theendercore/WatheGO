@@ -30,6 +30,11 @@ public class AddingSkinMixin {
         register("GOLDEN_SHEAR", 0xe28634, "Golden Shear");
         register("ROZE", 0x8c004d, "Roze");
         register("MAKESHIFT", 0xd79635, "Makeshift");
+        register("MISSING_SOURCE", 0xff00ff, "Missing Source");
+        register("NAIL", 0x727272, "Nail");
+        register("CULTIST", 0xb92929, "Cultist");
+        register("STARLIGHT", 0x621c9c, "Starlight");
+        register("DART", 0xa62530, "Dart");
     }
 
     @Invoker("<init>")
