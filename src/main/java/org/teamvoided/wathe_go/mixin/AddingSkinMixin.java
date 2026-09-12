@@ -38,7 +38,7 @@ public class AddingSkinMixin {
         register("ICICLE", 0x70a4fc, "Icicle");
         register("COSMIC_STICK", 0x1f1433, "Cosmic Stick");
         register("INJECTION", 0x31292a, "Injection");
-        register("SWITCH", 0x9c1017, "Stiletto");
+        register("STILETTO", 0x9c1017, "Stiletto");
     }
 
     @Invoker("<init>")
