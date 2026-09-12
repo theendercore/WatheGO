@@ -15,7 +15,7 @@ class ModelProv(o: FabricDataOutput) : FabricModelProvider(o) {
     override fun generateBlockStateModels(gen: BlockModelGenerators) = Unit
 
     override fun generateItemModels(gen: ItemModelGenerators) {
-        val list = listOf(
+        listOf(
             "folly_stick",
             "jolly_stick",
             "sweet_tooth",
@@ -33,22 +33,29 @@ class ModelProv(o: FabricDataOutput) : FabricModelProvider(o) {
             "cosmic_stick",
             "injection",
             "stiletto"
-        )
-        for (name in list) {
-            gen.knife(name)
-        }
-    }
+        ).forEach { gen.knife(it) }
 
+        listOf(
+            "gay",
+        ).forEach { gen.gun(it) }
+    }
 
     fun ItemModelGenerators.knife(name: String) {
         val texture = TextureMapping().putForced(TextureSlot.LAYER0, wId("item/knife/$name"))
-
-        // wathe:item/template_knife
         TEMPLATE_KNIFE.create(wId("item/knife_${name}_in_hand"), texture, output)
         TEMPLATE_KNIFE.create(wId("item/knife_${name}"), texture, output)
     }
 
+    fun ItemModelGenerators.gun(name: String) {
+        val texture = TextureMapping().putForced(TextureSlot.LAYER0, wId("item/gun/$name"))
+        TEMPLATE_PISTOL.create(wId("item/gun_${name}"), texture, output)
+        TEMPLATE_PISTOL.create(wId("item/gun_${name}_in_hand"), texture, output)
+    }
+
     companion object {
+
         val TEMPLATE_KNIFE = ModelTemplate(Optional.of(wId("item/template_knife")), Optional.empty())
+        val TEMPLATE_PISTOL = ModelTemplate(Optional.of(wId("item/template_pistol")), Optional.empty())
+
     }
 }
