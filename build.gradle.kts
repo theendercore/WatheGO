@@ -40,6 +40,8 @@ dependencies {
     modImplementation(fileTree("libs"))
     // Dependencies
 //    modImplementation(libs.fzzy.config)
+    modImplementation("maven.modrinth:wathe:1.4.1-1.21.1")
+    modImplementation("maven.modrinth:ratatouille:1.4.3-1.21.1")
     // QoL
     modImplementation(libs.modmenu)
     modCompileOnly("${libs.emi.get()}:api")
@@ -48,8 +50,8 @@ dependencies {
     modImplementation(libs.creative.works)
     modImplementation(libs.imguimc)
 }
-val username = "vDev"
-val uuid: String? = null
+val username = "Miss_Aranea"
+val uuid: String? = "f66d366b-a3c0-491f-aa26-5cdb0466e060"
 
 loom {
     splitEnvironmentSourceSets()

@@ -4,7 +4,6 @@
   "package": "org.teamvoided.wathe_go.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "AddingSkinMixin"
   ],
   "injectors": {
     "defaultRequire": 1

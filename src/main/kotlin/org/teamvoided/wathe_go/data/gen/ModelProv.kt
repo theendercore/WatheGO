@@ -11,11 +11,9 @@ import org.teamvoided.wathe_go.WatheGO.wId
 import java.util.*
 
 class ModelProv(o: FabricDataOutput) : FabricModelProvider(o) {
-    companion object {
-        val TEMPLATE_KNIFE = ModelTemplate(Optional.of(wId("item/template_knife")), Optional.empty())
-    }
 
     override fun generateBlockStateModels(gen: BlockModelGenerators) = Unit
+
     override fun generateItemModels(gen: ItemModelGenerators) {
         val list = listOf(
             "folly_stick",
@@ -45,7 +43,12 @@ class ModelProv(o: FabricDataOutput) : FabricModelProvider(o) {
     fun ItemModelGenerators.knife(name: String) {
         val texture = TextureMapping().putForced(TextureSlot.LAYER0, wId("item/knife/$name"))
 
+        // wathe:item/template_knife
         TEMPLATE_KNIFE.create(wId("item/knife_${name}_in_hand"), texture, output)
         TEMPLATE_KNIFE.create(wId("item/knife_${name}"), texture, output)
+    }
+
+    companion object {
+        val TEMPLATE_KNIFE = ModelTemplate(Optional.of(wId("item/template_knife")), Optional.empty())
     }
 }
